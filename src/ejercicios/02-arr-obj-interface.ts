@@ -1,24 +1,21 @@
 /*
     ===== Código de TypeScript =====
 */
+let skills: string [] = ['C', 'Javascript', 'Typescript'];
 
-let habilidades: string[] = ['Bash','Counter', 'Healing'];
+interface Player {
 
-interface Personaje {
-    nombre: string;
-    hp: number;
-    habilidades: string[];
-    puebloNatal?: string;
+    name: string,
+    points: number,
+    skills: string[]
+    phone?: number
 }
 
+const player : Player = {
 
-const personaje: Personaje = {
-    nombre: 'Strider',
-    hp: 100,
-    habilidades: ['Bash','Counter','Healing']
+    name: "Leandro",
+    points: 100,
+    skills: ['C', 'Javascript', 'Typescript']
 }
-
-personaje.puebloNatal = 'Pueblo Paleta';
-
-
-console.table( personaje );
+player.phone = 6015553322;
+console.table(player);

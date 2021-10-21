@@ -1,14 +1,9 @@
 /*
     ===== Código de TypeScript =====
 */
-
-let nombre: string = 'Strider';
-let hp: number | string = 95;
-let estaVivo: boolean = true;
-
-hp = 'FULL';
-
-
-console.log( nombre, hp );
-
+let playerName: string = "Leandro";
+let points: number | string = 100;
+points = '100%';
+let isAlive: boolean = true;
+console.log(playerName, points, isAlive);
 
