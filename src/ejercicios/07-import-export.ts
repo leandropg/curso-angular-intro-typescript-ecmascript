@@ -1,22 +1,17 @@
-import { Producto, calculaISV } from './06-desestructuracion-funcion';
-/*
-    ===== Código de TypeScript =====
-*/
+import { Product, calculateTaxes } from './06-desestructuracion-funcion';
 
-const carritoCompras: Producto[] = [
+console.log('Execute All code from 06-desestructuracion-funcion by the IMPORT');
+const cart : Product [] = [
     {
-        desc: 'Telefono 1',
-        precio: 100
+        description: 'Phone',
+        price: 400000
     },
     {
-        desc: 'Telefono 2',
-        precio: 150
-    },
+        description: 'Tablet',
+        price: 500000
+    }
 ];
 
-const [total, isv] = calculaISV( carritoCompras );
-
-console.log( 'Total', total );
-console.log( 'ISV', isv )
-
-
+const [ total, iva] = calculateTaxes(cart);
+console.log('Total [07-import-export]: ', total);
+console.log('IVA [07-import-export]: ', iva);

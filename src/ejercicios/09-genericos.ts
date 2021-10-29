@@ -1,19 +1,8 @@
-/*
-    ===== Código de TypeScript =====
-*/
-
-function queTipoSoy<T>(argumento: T) {
-    return argumento;
+function whatTypeAm<T>(parameter: T) {
+ 
+    return parameter;
 }
 
-
-let soyString  = queTipoSoy('Hola Mundo');
-let soyNumbero = queTipoSoy( 100 );
-let soyArreglo = queTipoSoy( [1,2,3,4,5,6,7,8,9,10] );
-
-let soyExplicito = queTipoSoy<number>( 100 );
-
-
-
-
-
+let stringType = whatTypeAm('Hello');
+let numberType = whatTypeAm(123);
+let arrayType = whatTypeAm([1, 2, 3]);

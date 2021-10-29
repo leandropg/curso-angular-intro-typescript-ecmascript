@@ -1,24 +1,24 @@
-interface Product {
+export interface Product {
 
-    descrption: string;
+    description: string;
     price: number;
 }
 
 const tablet: Product = {
 
-   descrption: 'Tablet',
+   description: 'Tablet',
    price: 500000
 }
 
 const phone: Product = {
 
-   descrption: "Phone",
+   description: "Phone",
    price: 400000
 }
 
 const cart = [ tablet, phone ];
 
-function calculateTaxes(products: Product []) : [number, number] {
+export function calculateTaxes(products: Product []) : [number, number] {
 
    let total: number = 0;
 

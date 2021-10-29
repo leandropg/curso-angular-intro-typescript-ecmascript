@@ -1,30 +1,25 @@
-/*
-    ===== Código de TypeScript =====
-*/
+interface Passenger {
 
-
-interface Pasajero {
-  nombre: string;
-  hijos?: string[]
+  name: string,
+  childs?: string[];
 }
 
-const pasajero1: Pasajero = {
-  nombre: 'Fernando'
+const passenger1: Passenger = {
+
+  name: 'Andrew'
 }
 
-const pasajero2: Pasajero = {
-  nombre: 'Melissa',
-  hijos: ['Natalia','Gabriel']
+const passenger2: Passenger = {
+
+  name: 'Andrea',
+  childs: ['Charles', 'Angelica', 'Matthew']
 }
 
+function printChilds(passenger: Passenger): void {
 
-function imprimeHijos( pasajero: Pasajero ): void {
-
-  const cuantosHijos = pasajero.hijos?.length || 0;
-  
-  console.log( cuantosHijos );
-
+  const qtyChilds = passenger.childs?.length || 0;
+  console.log(qtyChilds);
 }
 
-
-imprimeHijos( pasajero1 );
+printChilds(passenger1);
+printChilds(passenger2);

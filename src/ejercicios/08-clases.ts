@@ -1,28 +1,32 @@
-/*
-    ===== Código de TypeScript =====
-*/
-class PersonaNormal {
+class Person {
 
-    constructor( 
-        public nombre: string, 
-        public direccion: string 
-    )  {}
-
+    constructor (
+        public firstName: String,
+        public lastName: String
+    ) {}
 }
 
+class WorkerPerson extends Person {
 
-class Heroe extends PersonaNormal {
+    /*id: number;             // By default is Public
+    private name: String;
+    public title: String;*/
+    static serialNumber: number;
 
-    constructor( 
-        public alterEgo: string,
-        public edad: number,
-        public nombreReal: string
+    constructor(
+        private pFirstName: string,
+        private pLastName: string,
+        public id: number,
+        public title: string,
+        public age?: number
     ) {
-        super( nombreReal, 'New York, USA' );
+        //this.name = name;
+        super(pFirstName, pLastName);
     }
-
 }
 
-const ironman = new Heroe('Ironman',45, 'Tony');
-
-console.log(ironman);
+// Create instance
+const andrew = new WorkerPerson('Andrew', 'Torres', 123, 'CEO');
+console.log(andrew);
+const andrea = new WorkerPerson('Andrea', 'Lopez', 456, 'CTO', 30);
+console.log(andrea);
