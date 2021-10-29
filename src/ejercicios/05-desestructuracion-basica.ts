@@ -1,42 +1,36 @@
-/*
-    ===== Código de TypeScript =====
-*/
+interface PlayerMusic {
 
-interface Reproductor {
-    volumen: number;
-    segundo: number;
-    cancion: string;
-    detalles: Detalles 
+    volume: number;
+    second: number;
+    song: string;
+    details: Details;
 }
 
-interface Detalles {
-    autor: string;
-    anio: number;
+interface Details {
+    
+    author: string;
+    year: number;
 }
 
-const reproductor: Reproductor = {
-    volumen: 90,
-    segundo: 36,
-    cancion: 'Mess',
-    detalles: {
-        autor: 'Ed Sheeran',
-        anio: 2015
+let playerMusic: PlayerMusic = {
+
+    volume: 90,
+    second: 36,
+    song: 'My favorite song',
+    details: {
+
+        author: 'My favorite Author',
+        year: 1990
     }
 }
 
-const { volumen, segundo, cancion, detalles } = reproductor;
-const { autor } = detalles;
+const { song, details, volume: myVolume } = playerMusic;
+const { author } = details;
+console.log('Author: ', author, ' Song: ', song, ' Volume: ', myVolume);
 
-
-// console.log('El volumen actual de: ', volumen );
-// console.log('El segundo actual de: ', segundo );
-// console.log('La canción actual de: ', cancion );
-// console.log('El autor es: ', autor );
-
-
-const dbz: string[] = ['Goku', 'Vegeta', 'Trunks'];
-const [ , , p3 ] = dbz;
-
-// console.log('Personaje 1:', p1 );
-// console.log('Personaje 2:', p2 );
-console.log('Personaje 3:', p3 );
+// Destructuring Array
+const cities: string[] = ['Bogota', 'Medellin', 'Cali'];
+const [ c1, c2, c3 ] = cities;  // const [ , , c3 ] = cities
+console.log('Ciudad 1:', c1);
+console.log('Ciudad 2:', c2);
+console.log('Ciudad 3:', c3);

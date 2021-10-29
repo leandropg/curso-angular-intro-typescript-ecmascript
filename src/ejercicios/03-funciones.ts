@@ -1,43 +1,41 @@
 /*
     ===== Código de TypeScript =====
 */
+function add ( a: number, b: number): number {
 
-
-function sumar(a: number, b:number): number {
-    return a + b;
+    return (a + b);
 }
 
-const sumarFlecha = (a:number, b:number):number => {
-    return a + b;
+// ? Optional  |  = Initalized
+const addArrow = (a: number, b: number, c?: number, d: number = 10): number => {
+
+    return (a + b) * d;
 }
 
-function multiplicar( numero: number, otroNumero?: number, base:number = 2 ): number {
-    return numero * base;
+console.log(add(10, 20));
+console.log(addArrow(10, 20));
+
+interface Employee {
+
+    name: string,
+    salary: number,
+    showSalary: () => void;
 }
 
+function increaseSalary(employee: Employee, incrementValue: number): void {
 
-interface PersonajeLOR {
-    nombre: string;
-    pv: number;
-    mostrarHp: () => void;
+    employee.salary += incrementValue;
 }
 
+const leandro : Employee = {
 
-function curar( personaje: PersonajeLOR, curarX:number ): void {
+    name: "Leandro",
+    salary: 1000000,
+    showSalary() {
 
-    personaje.pv += curarX;
-}
-
-const nuevoPersonaje: PersonajeLOR = {
-    nombre: 'Strider',
-    pv: 50,
-    mostrarHp() {
-        console.log( 'Puntos de vida:', this.pv );
+        console.log(this.salary);
     }
 }
 
-curar( nuevoPersonaje, 20 );
-
-nuevoPersonaje.mostrarHp();
-
-
+increaseSalary(leandro, 1000000);
+leandro.showSalary();

@@ -1,36 +1,35 @@
 /*
     ===== Código de TypeScript =====
 */
-interface SuperHeroe {
-    nombre: string;
-    edad: number;
-    direccion: Direccion,
-    mostrarDireccion: () => string;
+interface SuperHero {
+
+    name: string;
+    age: number;
+    direction: Direction;
+    showDirection: () => string;
 }
 
-interface Direccion {
-    calle: string;
-    pais: string;
-    ciudad: string;
+interface Direction {
+
+    street: string;
+    country: string;
+    city: string;
 }
 
+const superhero: SuperHero = {
 
+    name: "Spiderman",
+    age: 30,
+    direction: {
 
-const superHeroe: SuperHeroe = {
-    nombre: 'Spiderman',
-    edad: 30,
-    direccion: {
-        calle: 'Main St',
-        pais: 'USA',
-        ciudad: 'NY'
+        street: "Main St",
+        country: "USA",
+        city: "NY"
     },
-    mostrarDireccion() {
-        return this.nombre + ', ' + this.direccion.ciudad + ', ' + this.direccion.pais;
+    showDirection() { 
+    
+        return (this.name + ' lives on ' + this.direction.city)
     }
-}
+};
 
-
-const direccion = superHeroe.mostrarDireccion();
-console.log( direccion );
-
-
+console.log(superhero.showDirection())
